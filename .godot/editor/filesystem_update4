@@ -1,7 +1,3 @@
 res://default_env.tres
 res://scenes/MainLevel.tscn
-res://scenes/ShipMovements.gd
 res://scenes/GreenShip.tscn
-res://scenes/PlatformGreen.gd
-res://scenes/PlatformBlue.gd
-res://scenes/ObjectiveArea.gd

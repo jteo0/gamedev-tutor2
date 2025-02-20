@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://cdoksexcakmop"]
+[gd_scene load_steps=13 format=3 uid="uid://cdoksexcakmop"]
 
 [ext_resource type="PackedScene" uid="uid://y5a4e3ajuy2r" path="res://scenes/StonePlatform.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://datfp8kxjrjg" path="res://scenes/BlueShip.tscn" id="2"]
@@ -7,6 +7,10 @@
 [ext_resource type="Script" path="res://scenes/PlatformGreen.gd" id="3_tw6hy"]
 [ext_resource type="Script" path="res://scenes/ObjectiveArea.gd" id="4"]
 [ext_resource type="PackedScene" uid="uid://bbq30ytcj5d3t" path="res://scenes/GreenShip.tscn" id="4_bmyqd"]
+[ext_resource type="Texture2D" uid="uid://57lykq3semnt" path="res://cloud_bg/1.png" id="8_etys5"]
+[ext_resource type="Texture2D" uid="uid://c4o1n2i3lkipi" path="res://cloud_bg/2.png" id="9_a10y7"]
+[ext_resource type="Texture2D" uid="uid://bdal2jk3mffsk" path="res://cloud_bg/3.png" id="10_pikke"]
+[ext_resource type="Texture2D" uid="uid://y02fodn3sagb" path="res://cloud_bg/4.png" id="11_q1veh"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(138.75, 79)
@@ -52,6 +56,31 @@ shape = SubResource("1")
 unique_name_in_owner = true
 points = PackedVector2Array(3, 0, 3, 79, 142, 79, 142, 0)
 closed = true
-width = 1.0
+width = 2.0
+
+[node name="CloudyBackground" type="ParallaxBackground" parent="."]
+offset = Vector2(576, 324)
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 576, 324)
+
+[node name="Layer1" type="ParallaxLayer" parent="CloudyBackground"]
+
+[node name="Layer1Sprite" type="Sprite2D" parent="CloudyBackground/Layer1"]
+texture = ExtResource("8_etys5")
+
+[node name="Layer2" type="ParallaxLayer" parent="CloudyBackground"]
+
+[node name="Layer2Sprite" type="Sprite2D" parent="CloudyBackground/Layer2"]
+texture = ExtResource("9_a10y7")
+
+[node name="Layer3" type="ParallaxLayer" parent="CloudyBackground"]
+
+[node name="Layer3Sprite" type="Sprite2D" parent="CloudyBackground/Layer3"]
+texture = ExtResource("10_pikke")
+
+[node name="Layer4" type="ParallaxLayer" parent="CloudyBackground"]
+
+[node name="Layer4Sprite" type="Sprite2D" parent="CloudyBackground/Layer4"]
+texture = ExtResource("11_q1veh")
 
 [connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]
