@@ -1,9 +1,9 @@
 # Tutorial 2
 <h5>Latihan: Playtest</h5>
-- Apa saja pesan <i>log</i> yang dicetak pada panel Output?
-Pada awal playtest dimulai, pesan 'Platform initialized' muncul di log.
-- Coba gerakkan landasan ke batas area bawah, lalu gerakkan kembali ke atas hingga hampir menyentuh batas atas. Apa saja pesan log yang dicetak pada panel Output?
-'Reached objective!'
+- Apa saja pesan <i>log</i> yang dicetak pada panel Output?<br>
+Pada awal playtest dimulai, pesan 'Platform initialized' muncul di log.<br>
+- Coba gerakkan landasan ke batas area bawah, lalu gerakkan kembali ke atas hingga hampir menyentuh batas atas. Apa saja pesan log yang dicetak pada panel Output?<br>
+'Reached objective!'<br>
 - Buka scene MainLevel dengan tampilan workspace 2D. Apakah lokasi scene ObjectiveArea memiliki kaitan dengan pesan log yang dicetak pada panel Output pada percobaan sebelumnya?
 Setiap kali body 'BlueShip' (secara spesifik, CollisionShape2D BlueShip) masuk ke dalam area ObjectiveArea atau dengan kata lain ObjectiveArea mendeteksi collision dengan BlueShip, pesan 'Reached objective!' akan di output.
 
