@@ -1,7 +1,7 @@
 # Tutorial 2
 <h3>Latihan: Playtest</h3>
 <p>- Apa saja pesan <i>log</i> yang dicetak pada panel Output?<br>
-Pada awal playtest dimulai, pesan 'Platform initialized' muncul di log.<br>
+> Pada awal playtest dimulai, pesan 'Platform initialized' muncul di log.<br>
 - Coba gerakkan landasan ke batas area bawah, lalu gerakkan kembali ke atas hingga hampir menyentuh batas atas. Apa saja pesan log yang dicetak pada panel Output?<br>
 'Reached objective!'<br>
 - Buka scene MainLevel dengan tampilan workspace 2D. Apakah lokasi scene ObjectiveArea memiliki kaitan dengan pesan log yang dicetak pada panel Output pada percobaan sebelumnya?<br>
