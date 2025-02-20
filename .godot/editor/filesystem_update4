@@ -1,5 +1,3 @@
 res://default_env.tres
 res://scenes/MainLevel.tscn
-res://scenes/StonePlatform.tscn
 res://scenes/BlueShip.tscn
-res://scenes/PlatformBlue.gd
