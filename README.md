@@ -13,7 +13,7 @@
 <dl>
 <dt>- Scene BlueShip dan StonePlatform sama-sama memiliki sebuah child node bertipe Sprite. Apa fungsi dari node bertipe Sprite?<br></dt>
 <dd>Node Sprite digunakan untuk mendisplay 2D texture, yaitu mendisplay gambar yang dapat dilihat dari suatu objek 2D.<br></dd>
-<<dt>- Root node dari scene BlueShip dan StonePlatform menggunakan tipe yang berbeda. BlueShip menggunakan tipe RigidBody2D, sedangkan StonePlatform menggunakan tipe StaticBody2D. Apa perbedaan dari masing-masing tipe node?<br></dt>
+<dt>- Root node dari scene BlueShip dan StonePlatform menggunakan tipe yang berbeda. BlueShip menggunakan tipe RigidBody2D, sedangkan StonePlatform menggunakan tipe StaticBody2D. Apa perbedaan dari masing-masing tipe node?<br></dt>
 <dd>Perbedaan dari StaticBody2D dan RigidBody2D adalah StaticBody2D tidak dapat digerakkan lewat kekuatan eksternal (<i>external forces</i>) dan juga tidak dapat gerakkan objek lain. Di sisi lainnya, RigidBody2D dapat bergerak menurut <i>physics engine</i>, yaitu dapat diefek oleh objek lain dan kekuatan seperti <i>gravity</i>.<br></dt>
 <dt>- Ubah nilai atribut Mass pada tipe RigidBody2D secara bebas di scene BlueShip, lalu coba jalankan scene MainLevel. Apa yang terjadi?<br></dt>
 <dd>Dari percobaan yang saya lakukan, tidak ada perubahan yang datang dari tambahnya/kurangnya atribut Mass yang bisa kelihatan.<br></dd>
