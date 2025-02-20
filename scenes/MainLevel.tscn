@@ -1,9 +1,12 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdoksexcakmop"]
+[gd_scene load_steps=9 format=3 uid="uid://cdoksexcakmop"]
 
 [ext_resource type="PackedScene" uid="uid://y5a4e3ajuy2r" path="res://scenes/StonePlatform.tscn" id="1"]
 [ext_resource type="PackedScene" uid="uid://datfp8kxjrjg" path="res://scenes/BlueShip.tscn" id="2"]
 [ext_resource type="Script" path="res://scenes/PlatformBlue.gd" id="3"]
+[ext_resource type="PackedScene" uid="uid://c0u7fopovyk7n" path="res://scenes/SnowPlatform.tscn" id="3_dxdvr"]
+[ext_resource type="Script" path="res://scenes/PlatformGreen.gd" id="3_tw6hy"]
 [ext_resource type="Script" path="res://scenes/ObjectiveArea.gd" id="4"]
+[ext_resource type="PackedScene" uid="uid://bbq30ytcj5d3t" path="res://scenes/GreenShip.tscn" id="4_bmyqd"]
 
 [sub_resource type="RectangleShape2D" id="1"]
 size = Vector2(138.75, 79)
@@ -19,21 +22,36 @@ script = ExtResource("3")
 [node name="StonePlatform2" parent="PlatformBlue" instance=ExtResource("1")]
 position = Vector2(70, 0)
 
+[node name="PlatformGreen" type="Node2D" parent="."]
+position = Vector2(1045, 565)
+script = ExtResource("3_tw6hy")
+
+[node name="SnowPlatform" parent="PlatformGreen" instance=ExtResource("3_dxdvr")]
+
+[node name="SnowPlatform2" parent="PlatformGreen" instance=ExtResource("3_dxdvr")]
+position = Vector2(70, 0)
+
 [node name="BlueShip" parent="." instance=ExtResource("2")]
 position = Vector2(72.7009, 421.901)
 mass = 1000.0
 lock_rotation = true
 
-[node name="BlueShip2" parent="." instance=ExtResource("2")]
-position = Vector2(72.7009, 421.901)
-mass = 1000.0
-lock_rotation = true
+[node name="GreenShip" parent="." instance=ExtResource("4_bmyqd")]
+position = Vector2(1075, 421.901)
+script = null
 
 [node name="ObjectiveArea" type="Area2D" parent="."]
+position = Vector2(1010, 0)
 script = ExtResource("4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ObjectiveArea"]
-position = Vector2(70.625, 40)
+position = Vector2(72.6, 39.5)
 shape = SubResource("1")
+
+[node name="ObjectiveBorder" type="Line2D" parent="ObjectiveArea"]
+unique_name_in_owner = true
+points = PackedVector2Array(3, 0, 3, 79, 142, 79, 142, 0)
+closed = true
+width = 1.0
 
 [connection signal="body_entered" from="ObjectiveArea" to="ObjectiveArea" method="_on_ObjectiveArea_body_entered"]

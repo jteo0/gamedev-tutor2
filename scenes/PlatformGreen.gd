@@ -4,18 +4,18 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	print("Get both ships into the square within 5 seconds!")
+	print("Platform initialized")
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if Input.is_action_pressed("up_w"):
+	if Input.is_action_pressed("move_up"):
 		move_local_y(-speed * delta, false)
 	
-	if Input.is_action_pressed("down_s"):
+	if Input.is_action_pressed("move_down"):
 		move_local_y(speed * delta, false)
-		
-	if Input.is_action_pressed("left_a"):
+
+	if Input.is_action_pressed("move_left"):
 		move_local_x(-speed * delta, false)
 	
-	if Input.is_action_pressed("right_d"):
+	if Input.is_action_pressed("move_right"):
 		move_local_x(speed * delta, false)
